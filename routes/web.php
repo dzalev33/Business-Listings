@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\ListingsController;
+
+Route::get('/', 'ListingsController@index');
 
 Auth::routes();
 Route::resource('listings', 'ListingsController');
